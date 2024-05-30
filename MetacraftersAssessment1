@@ -1,0 +1,32 @@
+const NFTs_data = []
+
+function mintNFT(Stu_name, Stu_uid, Stu_section) {
+    const nft={
+        "name": Stu_name,
+        "uid": Stu_uid,
+        "section": Stu_section
+    }
+    NFTs_data.push(nft);
+    console.log("Minted:" + Stu_name);
+}
+function listNFTs() {
+    console.log("\nMinted NFTs are: ");
+    for (let i = 0; i < NFTs_data.length; i++) {
+        console.log("\nName: " + NFTs_data[i].name);
+        console.log("UID: " + NFTs_data[i].uid);
+        console.log("Section: " + NFTs_data[i].section);
+    }
+
+}
+function getTotalSupply() {
+    console.log("\nTotal no. of Minted NFTs are: " + NFTs_data.length);
+}
+
+mintNFT("Satyam", "22BCS16356", "810");
+mintNFT("Vikash", "22BCS14348", "810");
+mintNFT("Raunak", "22BCS16382", "810");
+mintNFT("Abhishek", "22BCS16396", "810");
+listNFTs();
+getTotalSupply();
+
+
